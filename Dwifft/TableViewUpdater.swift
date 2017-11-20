@@ -30,6 +30,8 @@ public class TableViewUpdater: DiffableViewUpdater {
             return
         }
 
+        print("perform \(operations)")
+        
         tableView?.beginUpdates()
         tableView?.deleteRows(at: operations.deletionIndexPaths, with: deletionAnimation)
         tableView?.insertRows(at: operations.insertionIndexPaths, with: insertionAnimation)

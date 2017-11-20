@@ -68,6 +68,8 @@ fileprivate class ViewOperations<T: Equatable>: ViewOperationsType {
             return
         }
 
+        print("update \(diff), oldRows: \(oldRows), newRows: \(newRows)")
+
         insertionIndexPaths.append(contentsOf: diff.insertions.map { step in
             return IndexPath(row: step.idx, section: sectionIndex)
         })
